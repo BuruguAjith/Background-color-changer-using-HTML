@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Background Color Changer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #colorInput {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #changeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label for="colorInput">Enter color name:</label>
+    <input type="text" id="colorInput" placeholder="e.g., red, blue, #FFA500">
+    <button id="changeButton">Change Background</button>
+
+    <script>
+        document.getElementById('changeButton').addEventListener('click', function () {
+            const colorInput = document.getElementById('colorInput').value;
+            document.body.style.backgroundColor = colorInput;
+        });
+    </script>
+</body>
+</html>
